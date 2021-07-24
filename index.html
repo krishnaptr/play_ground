@@ -1,42 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
-		<link rel="stylesheet" href="/dist/tailwind.css" />
-	</head>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="dist/tailwind.css">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+   
+</head>
+<style>
+    html{
+        scroll-behavior: smooth;
+    }
 
-	<body>
-		<div class="bg-black text-gray-200 min-h-screen p-10">
-			<!--HEADER-->
-			<div class="flex">
-				<img
-					class="mr-8"
-					src="https://placekitten.com/g/200/200"
-					alt="Main Image"
-				/>
-				<div>
-					<!--CONTENT-->
-					<h4 class="mt-0 mb-3 uppercase text-gray-500">Playlist</h4>
-					<h1>MIDDLE CHILD Radio</h1>
+    #menu-toggle:checked + #menu {
+    display: block;
+    }
 
-					<p>With J. Cole, Quavo, Ty Dollar $ign</p>
-					<p>Created by <a>Spotify</a> - 50 songs, 3 hr 2 min</p>
+    body{   
+        overflow-y: scroll;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
 
-					<!--BUTTON-->
-					<div>
-						<button>Play</button>
-						<button>Like</button>
-						<button>...</button>
-					</div>
-					<div>
-						<p>Followers</p>
-						<p>6000</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</body>
+    body::-webkit-scrollbar{
+        width: 0;
+        height: 0;
+       
+    }
+
+    
+</style>
+<body>
+  
+    <section name="header-menu">
+        <header class="bg-black w-full fixed py-5 px-10 lg:px-28 flex justify-between flex-wrap items-center z-50">
+        <div class="flex items-center">
+              <h1 class="text-white font-semibold font-Poppins text-3xl tracking-wide">Port<span class="text-crimson-500 text-4xl">F</span>olio</h1>
+              <span class="w-3 h-3 mt-3 ml-1 rounded-full bg-crimson-500"></span>
+        </div>
+
+     <label for="menu-toggle" class="lg:hidden block">
+        <svg class="fill-current svg text-white cursor-pointer hover:text-crimson-500 transition duration-500 ease-in-out" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path></svg>
+     </label>   
+    <input type="checkbox" class="hidden" id="menu-toggle">    
+    <div class="hidden mb-5 lg:mb-0 w-full lg:flex lg:items-center lg:w-auto" id="menu">
+    <nav>
+        <ul class="lg:flex lg:space-x-3 tracking-wide font-Poppins font-thin items-center lg:pt-0 pt-4 transition duration-1000 ease-in-out">
+            <li class="text-white"><a href="#" class="lg:p-2 py-3 px-0 block border-b-2 border-transparent hover:border-crimson-500 text-sm">Home</a></li>
+            <li class="text-white"><a href="#about" class="lg:p-2 py-3 px-0 block border-b-2 border-transparent hover:border-crimson-500 text-sm">About</a></li>
+            <li class="text-white"><a href="#services" class="lg:p-2 py-3 px-0 block border-b-2 border-transparent hover:border-crimson-500 text-sm">Services</a></li>
+            <li class="text-white"><a href="#" class="lg:p-2 py-3 px-0 block border-b-2 border-transparent hover:border-crimson-500 text-sm">Play Ground</a></li>
+            <li class="mt-4 lg:mt-0 lg:mx-auto lg:text-center lg:items-center"><a class="bg-gradient-to-r from-red-500 to-crimson-900 font-Poppins font-medium text-white text-sm px-8 py-1.5 rounded-full" href="#">Contact Me</a></li>
+
+        </ul>
+    </nav>
+    </div>
+    </header>
+</section>
+
+<section class="min-h-screen bg-black pt-20 z-10">
+ 
+    <div class="flex justify-between">
+        <div class="p-36 font-Poppins text-white z-10">
+            <button class="shadow-2xl animate-bounce text-sm text-center cursor-default mb-4 font-normal bg-gradient-to-r from-red-500 to-crimson-900 py-2 px-5 rounded-full">Hello, I am</button>
+            <div class="text-6xl font-bold">Christoper Rays</div>
+            <div class="text-xl mt-4 font-normal">A Professional <span class="text-crimson-500 skill"></span></div>
+            <button class="mt-8 rounded-full border-2 text-sm border-crimson-500 py-2 px-4 hover:border-crimson-500 transform hover:scale-110 transition duration-500 ease-in-out">Download CV</button>
+            <button class="ml-4 mt-8 rounded-full border-2 bg-gradient-to-r from-red-500 to-crimson-900 text-sm border-black py-2 px-7 transform hover:scale-110 hover:bg-crimson-700 transition duration-300 ease-in-out">My Project</button>
+        </div>
+            <div>
+                <img src="img/lee-campbell-yn99GX2bZYw-unsplash.jpg" class="w-4/12 absolute bottom-0 right-0  mr-36">
+            </div>
+        </div>
+ 
+</section>
+
+<section class="min-h-auto bg-black text-white pt-20" id="about">
+<div class="bg-gradient-to-tr from-gray-900 to-black-900 w-4/5 h-96 mx-auto rounded-2xl">
+    <div class="bg-white w-96 h-3/5 absolute -mt-4 ml-10 rounded-2xl">
+        
+    </div>
+</div>
+</section>
+
+<section class="min-h-screen bg-black text-white" id="services">
+    <div class="text-3xl font-bold text-center pt-32 pb-10 font-Poppins opacity-100">
+        <span class="text-transparent bg-clip-text text-white">Services</span>
+    </div>
+    <div class="flex flex-wrap justify-center">
+        <div class="flex flex-col justify-center items-center text-center bg-gradient-to-tr from-gray-900 to-black w-56 h-64 rounded-tr-3xl rounded-bl-3xl m-5 opacity-80 border-gray-900 border-b-8 hover:border-crimson-500 transition transform translate-x-0 translate-y-0 hover:-translate-y-5 duration-700 ease-in-out">
+            <div class="h-16 w-16 bg-gradient-to-r from-red-500 to-crimson-900 shadow-2xl flex justify-center items-center rounded-3xl mb-5">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                 
+            </div>
+            <div class="text-white font-bold text-lg font-Poppins text-center">Web Development</div>
+            <div class="text-gray-400 text-xs font-Poppins text-center p-3 leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, quod?</div>
+        </div>
+        <div class="flex flex-col justify-center items-center text-center bg-gradient-to-tr from-gray-900 to-black w-56 h-64 rounded-tr-3xl rounded-bl-3xl m-5 opacity-80 border-gray-900 border-b-8 hover:border-crimson-500 transition transform translate-x-0 translate-y-0 hover:-translate-y-5 duration-700 ease-in-out">
+            <div class="h-16 w-16 bg-gradient-to-r from-red-500 to-crimson-900 shadow-2xl flex justify-center items-center rounded-3xl mb-5">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                 
+            </div>
+            <div class="text-white font-bold text-lg font-Poppins text-center">Graphic Design</div>
+            <div class="text-gray-400 text-xs font-Poppins text-center p-3 leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, quod?</div>
+        </div>
+        <div class="flex flex-col justify-center items-center text-center bg-gradient-to-tr from-gray-900 to-black w-56 h-64 rounded-tr-3xl rounded-bl-3xl m-5 opacity-80 border-gray-900 border-b-8 hover:border-crimson-500 transition transform translate-x-0 translate-y-0 hover:-translate-y-5 duration-700 ease-in-out">
+            <div class="h-16 w-16 bg-gradient-to-r from-red-500 to-crimson-900 shadow-2xl flex justify-center items-center rounded-3xl mb-5">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                 
+            </div>
+            <div class="text-white font-bold text-lg font-Poppins text-center">UI/UX Design</div>
+            <div class="text-gray-400 text-xs font-Poppins text-center p-3 leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, quod?</div>
+        </div>
+        <div class="flex flex-col justify-center items-center text-center bg-gradient-to-tr from-gray-900 to-black w-56 h-64 rounded-tr-3xl rounded-bl-3xl m-5 opacity-80 border-gray-900 border-b-8 hover:border-crimson-500 transition transform translate-x-0 translate-y-0 hover:-translate-y-5 duration-700 ease-in-out">
+            <div class="h-16 w-16 bg-gradient-to-r from-red-500 to-crimson-900 shadow-2xl flex justify-center items-center rounded-3xl mb-5">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z" />
+                  </svg>
+                 
+            </div>
+            <div class="text-white font-bold text-lg font-Poppins text-center">Videography</div>
+            <div class="text-gray-400 text-xs font-Poppins text-center p-3 leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, quod?</div>
+            
+        </div>
+
+    </div>
+</section>
+
+
+
+<script>
+    var typed = new Typed('.skill', {
+      strings: ['Web Developer','Web Designer','Video Editor'],
+      typeSpeed:70,
+      backSpeed:70,
+      smartBackspace: false,
+      loop:true,
+    });
+  </script>
+ 
+</body>
 </html>
