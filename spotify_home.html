@@ -4,12 +4,28 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
+		<title>Spotify Lite Playlist Template</title>
 		<link rel="stylesheet" href="/dist/tailwind.css" />
+		<style>
+
+			.list-song .song>button:nth-child(1){
+				visibility: hidden;
+			}
+			.list-song .song>button:nth-child(2){
+				visibility: hidden;
+			}
+			.list-song .song:hover>button:nth-child(1){
+				visibility: visible;
+			}
+			.list-song .song:hover>button:nth-child(2){
+				visibility: visible;
+			}
+
+		</style>
 	</head>
 
 	<body>
-		<div class="bg-black text-gray-200 min-h-screen p-10">
+		<div class="bg-gradient-to-b from-gray-700 to-black min-h-screen p-10">
 			<!--HEADER-->
 			<div class="flex">
 				<img
@@ -17,25 +33,96 @@
 					src="https://placekitten.com/g/200/200"
 					alt="Main Image"
 				/>
-				<div>
+				<div class="flex flex-col justify-end w-full">
 					<!--CONTENT-->
-					<h4 class="mt-0 mb-3 uppercase text-gray-500">Playlist</h4>
-					<h1>MIDDLE CHILD Radio</h1>
-
-					<p>With J. Cole, Quavo, Ty Dollar $ign</p>
-					<p>Created by <a>Spotify</a> - 50 songs, 3 hr 2 min</p>
-
+					<h4 class="mt-0 mb-2 uppercase text-gray-400 tracking-widest text-xs font-semibold">Playlist</h4>
+					<h1 class="mt-0 mb-2 text-white font-bold text-5xl tracking-wide">LOVE HEARTED Songs</h1>
+					<p class="text-gray-400 text-sm mb-2 font-semibold">With Christina Perri, Kodaline, Calum Scott, Olivia Rodrigo and more</p>
+					<p class="text-gray-400 text-sm font-semibold">Created by <a class="font-bold text-white">Krsn</a> • 7 songs, 32 min</p>
 					<!--BUTTON-->
-					<div>
-						<button>Play</button>
-						<button>Like</button>
-						<button>...</button>
-					</div>
-					<div>
-						<p>Followers</p>
-						<p>6000</p>
+					<div class="flex mt-6 justify-between">
+						<div class="flex h-8">
+							<button class="bg-green-600 hover:bg-green-700 text-green-100 rounded-full px-10 mr-4 uppercase text-xs tracking-widest font-bold">Play</button>
+							<button class="mr-4 border border-white px-1 rounded-full">❤</button>
+							<button class="mr-4 border border-white px-2 rounded-full text-white">....</button>
+						</div>	
+						<div class="text-gray-400 text-sm tracking-widest text-right -mt-2">
+							<p class="mb-1 uppercase text-xs font-semibold">Followers</p>
+							<p class="font-semibold">6,562</p>
+						</div>
 					</div>
 				</div>
+			</div>
+			<div class="mt-10 text-white list-song">
+				<div class="mb-0">	
+					<span>🔍</span><a class="text-sm ml-2 text-gray-400 font-medium">Filter</a>
+				</div>
+				<!-- Song List -->
+				<div class="flex pt-5 text-gray-400 border-b border-gray-800 uppercase">
+					<div class="p-2 w-8 flex-shrink-0"></div> <!-- Flex shrink Untuk merapatkan kolom -->
+					<div class="p-2 w-8 flex-shrink-0"></div>
+					<div class="p-2 w-full text-xs tracking-widest font-semibold">Title</div>
+					<div class="p-2 w-full text-xs tracking-widest font-semibold">Artist</div>
+					<div class="p-2 w-full text-xs tracking-widest font-semibold">Album</div>
+					<div class="p-2 w-12 flex-shrink-0">⌚</div>
+				</div>
+				<div class="song flex hover:text-green-600 hover:bg-gray-800 border-b border-gray-800">
+					<button class="p-2 w-8 flex-shrink-0">▶</button> <!-- Flex shrink Untuk merapatkan kolom -->
+					<button class="p-2 w-8 flex-shrink-0">❤</button>
+					<div class="p-2 w-full">All I Want</div>
+					<div class="p-2 w-full">Kodaline</div>
+					<div class="p-2 w-full">In A Perfect World</div>
+					<div class="p-2 w-12 flex-shrink-0">5:05</div>
+				</div>
+				<div class="song flex hover:text-green-600 hover:bg-gray-800 border-b border-gray-800">
+					<button class="p-2 w-8 flex-shrink-0">▶</button> <!-- Flex shrink Untuk merapatkan kolom -->
+					<button class="p-2 w-8 flex-shrink-0">❤</button>
+					<div class="p-2 w-full">Bad Liar</div>
+					<div class="p-2 w-full">Imagine Dragons</div>
+					<div class="p-2 w-full">Origins</div>
+					<div class="p-2 w-12 flex-shrink-0">4:20</div>
+				</div>
+				<div class="song flex hover:text-green-600 hover:bg-gray-800 border-b border-gray-800">
+					<button class="p-2 w-8 flex-shrink-0">▶</button> <!-- Flex shrink Untuk merapatkan kolom -->
+					<button class="p-2 w-8 flex-shrink-0">❤</button>
+					<div class="p-2 w-full">Dancing On My Own</div>
+					<div class="p-2 w-full">Calum Scott</div>
+					<div class="p-2 w-full">Only Human</div>
+					<div class="p-2 w-12 flex-shrink-0">4:21</div>
+				</div>
+				<div class="song flex hover:text-green-600 hover:bg-gray-800 border-b border-gray-800">
+					<button class="p-2 w-8 flex-shrink-0">▶</button> <!-- Flex shrink Untuk merapatkan kolom -->
+					<button class="p-2 w-8 flex-shrink-0">❤</button>
+					<div class="p-2 w-full">Fix You</div>
+					<div class="p-2 w-full">Cold Play</div>
+					<div class="p-2 w-full">X & Y</div>
+					<div class="p-2 w-12 flex-shrink-0">4:55</div>
+				</div>
+				<div class="song flex hover:text-green-600 hover:bg-gray-800 border-b border-gray-800">
+					<button class="p-2 w-8 flex-shrink-0">▶</button> <!-- Flex shrink Untuk merapatkan kolom -->
+					<button class="p-2 w-8 flex-shrink-0">❤</button>
+					<div class="p-2 w-full">Happier</div>
+					<div class="p-2 w-full">Olivia Rodrigo</div>
+					<div class="p-2 w-full">SOUR</div>
+					<div class="p-2 w-12 flex-shrink-0">2:55</div>
+				</div>
+				<div class="song flex hover:text-green-600 hover:bg-gray-800 border-b border-gray-800">
+					<button class="p-2 w-8 flex-shrink-0">▶</button> <!-- Flex shrink Untuk merapatkan kolom -->
+					<button class="p-2 w-8 flex-shrink-0">❤</button>
+					<div class="p-2 w-full">Jar Of Hearts</div>
+					<div class="p-2 w-full">Christina Perri</div>
+					<div class="p-2 w-full">Lovestrong</div>
+					<div class="p-2 w-12 flex-shrink-0">4:06</div>
+				</div>
+				<div class="song flex hover:text-green-600 hover:bg-gray-800 border-b border-gray-800">
+					<button class="p-2 w-8 flex-shrink-0">▶</button> <!-- Flex shrink Untuk merapatkan kolom -->
+					<button class="p-2 w-8 flex-shrink-0">❤</button>
+					<div class="p-2 w-full">Let Her Go</div>
+					<div class="p-2 w-full">Passenger</div>
+					<div class="p-2 w-full">All The Little Lights</div>
+					<div class="p-2 w-12 flex-shrink-0">4:12</div>
+				</div>
+				
 			</div>
 		</div>
 	</body>
