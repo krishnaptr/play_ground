@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Moving Background</title>
+    <link rel="stylesheet" href="dist/tailwind.css">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <style>
+        .grids-bg{
+            transform:skewY(-12deg)scale(1.6);
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden overflow-y-hidden bg-gray-900">
+
+    <div class="min-h-screen relative items-center justify-center flex">
+
+        <!-- Grid Bg -->
+        <div class="grids-bg absolute inset-0 p-2 grid grid-cols-12 gap-2 transform -skew-y-12 scale-125 overflow-hidden">
+            <div class="col-span-3 bg-blue-900 rounded animate-pulse"></div>
+            <div class="col-span-4 bg-blue-900 rounded animate-pulse"></div>
+            <div class="col-span-1 bg-blue-900 rounded animate-pulse"></div>
+            <div class="col-span-4 bg-blue-900 rounded animate-pulse"></div>
+            
+            <div class="col-span-5 bg-blue-900 rounded animate-pulse"></div>
+            <div class="col-span-3 bg-blue-900 rounded animate-pulse"></div>
+            <div class="col-span-2 bg-blue-900 rounded animate-pulse"></div>
+            <div class="col-span-2 bg-blue-900 rounded animate-pulse"></div>
+
+            <div class="col-span-4 bg-blue-900 rounded animate-pulse"></div>
+            <div class="col-span-7 bg-blue-900 rounded animate-pulse"></div>
+            <div class="col-span-1 bg-blue-900 rounded animate-pulse"></div>
+
+            <div class="col-span-3 bg-blue-900 rounded animate-pulse"></div>
+            <div class="col-span-3 bg-blue-900 rounded animate-pulse"></div>
+            <div class="col-span-6 bg-blue-900 rounded animate-pulse"></div>
+            
+            <div class="col-span-5 bg-blue-900 rounded animate-pulse"></div>
+            <div class="col-span-5 bg-blue-900 rounded animate-pulse"></div>
+            <div class="col-span-2 bg-blue-900 rounded animate-pulse"></div>
+
+            <div class="col-span-4 bg-blue-900 rounded animate-pulse"></div>
+            <div class="col-span-3 bg-blue-900 rounded animate-pulse"></div>
+            <div class="col-span-2 bg-blue-900 rounded animate-pulse"></div>
+            <div class="col-span-3 bg-blue-900 rounded animate-pulse"></div>
+
+            <div class="col-span-3 bg-blue-900 rounded animate-pulse"></div>
+            <div class="col-span-2 bg-blue-900 rounded animate-pulse"></div>
+            <div class="col-span-3 bg-blue-900 rounded animate-pulse"></div>
+            <div class="col-span-4 bg-blue-900 rounded animate-pulse"></div>
+
+            <div class="col-span-2 bg-blue-900 rounded animate-pulse"></div>
+            <div class="col-span-2 bg-blue-900 rounded animate-pulse"></div>
+            <div class="col-span-3 bg-blue-900 rounded animate-pulse"></div>
+            <div class="col-span-5 bg-blue-900 rounded animate-pulse"></div>
+
+            <div class="col-span-4 bg-blue-900 rounded animate-pulse"></div>
+            <div class="col-span-2 bg-blue-900 rounded animate-pulse"></div>
+            <div class="col-span-3 bg-blue-900 rounded animate-pulse"></div>
+            <div class="col-span-3 bg-blue-900 rounded animate-pulse"></div>
+
+            <div class="col-span-5 bg-blue-900 rounded animate-pulse"></div>
+            <div class="col-span-3 bg-blue-900 rounded animate-pulse"></div>
+            <div class="col-span-2 bg-blue-900 rounded animate-pulse"></div>
+            <div class="col-span-2 bg-blue-900 rounded animate-pulse"></div>
+
+            <div class="col-span-4 bg-blue-900 rounded animate-pulse"></div>
+            <div class="col-span-7 bg-blue-900 rounded animate-pulse"></div>
+            <div class="col-span-1 bg-blue-900 rounded animate-pulse"></div>
+        </div>
+
+        <div class="relative flex">
+            <h2 class="text-5xl text-white font-extrabold">Good <span class="greetings text-white font-extrabold text-5xl"></span></h2><span class="text-5xl text-white font-extrabold">, </span><span class="text-5xl font-extrabold text-pink-600 pl-3"> Sir.</span>
+        </div>
+    </div>
+    
+
+<script>
+    const gridItems = document.querySelectorAll('.grids-bg > div');
+    gridItems.forEach((item) => {
+        const delay = getRandomInt(0,5);
+        const duration = getRandomInt(3,6);
+
+        item.style.animationDelay = `${delay}s`;
+        item.style.animationDuration = `${duration}s`;
+    });
+
+    function getRandomInt(min, max){
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    };
+
+    var typed = new Typed('.greetings', {
+      strings: ['Morning','Afternoon','Evening','Night'],
+      typeSpeed:70,
+      backSpeed:50,
+      smartBackspace: false,
+      loop:true,
+      showCursor:false,
+    });
+
+</script>    
+</body>
+</html>
